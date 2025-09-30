@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dodge — game</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Dodge — уникнути смуг</h1>
+        <p class="lead">Рухайся вліво/вправо, ухиляйся від падаючих перешкод.</p>
+      </div>
+      <div class="muted">Keyboard: ← → / A -- D </div>
+    </header>
+
+    <div class="game-area">
+      <div class="canvas-wrap" style="position:relative;">
+        <canvas id="game" width="720" height="480"></canvas>
+        <div id="overlay" style="position:absolute;inset:12px;pointer-events:none"></div>
+
+        <div class="controls">
+          <button id="btn-start">Старт</button>
+          <button id="btn-pause" class="secondary">Пауза</button>
+          <button id="btn-reset" class="secondary">Перезапуск</button>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <div class="stat"><div class="muted">Score</div><div id="score" class="big">0</div></div>
+        <div class="stat"><div class="muted">High score</div><div id="high" class="big">0</div></div>
+        <div class="stat"><div class="muted">Speed</div><div id="speed" class="big">1.0x</div></div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
