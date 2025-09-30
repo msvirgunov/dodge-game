@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dodge — game</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="wrap">
     <header>
       <div>
-        <h1>Dodge — уникнути смуг</h1>
-        <p class="lead">Рухайся вліво/вправо, ухиляйся від падаючих перешкод.</p>
+        <h1>Dodge — уникни перешкод</h1>
+        <p class="lead">Керуй ← → або A/D, ухиляйся від падаючих блоків!</p>
       </div>
       <div class="muted">Keyboard: ← → / A -- D </div>
     </header>
@@ -25,6 +25,12 @@
           <button id="btn-start">Старт</button>
           <button id="btn-pause" class="secondary">Пауза</button>
           <button id="btn-reset" class="secondary">Перезапуск</button>
+          <select id="speed-select">
+            <option value="1">1x</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+          </select>
         </div>
       </div>
 
