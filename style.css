@@ -1,33 +1,41 @@
 :root {
-  --bg: #0f1724;
-  --panel: #0b1220;
-  --accent: #22c55e;
+  --bg: #0d0d1a;
+  --panel: #151530;
+  --accent: #00eaff;
   --muted: #94a3b8;
-  --danger: #ef4444;
-  font-family: system-ui, Arial, sans-serif;
+  --danger: #ff3c3c;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 html, body {
   height: 100%;
   margin: 0;
-  background: var(--bg);
+  background: radial-gradient(circle at top, #1a1a40, #0d0d1a);
   color: #fff;
 }
 
 .wrap { max-width: 960px; margin: 20px auto; padding: 20px; }
 header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-h1 { margin: 0; font-size: 20px; }
+h1 { margin: 0; font-size: 22px; color: var(--accent); text-shadow: 0 0 10px var(--accent); }
 .lead { font-size: 14px; color: var(--muted); }
 
 .game-area { display: grid; grid-template-columns: 1fr 240px; gap: 20px; }
-.canvas-wrap { background: #111; padding: 10px; border-radius: 8px; text-align: center; }
-canvas { background: #000; border-radius: 6px; display: block; margin: 0 auto; }
+.canvas-wrap { background: #000; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 0 20px #000; }
+canvas { background: linear-gradient(#050510, #0d0d1a); border-radius: 8px; display: block; margin: 0 auto; }
 
 .controls { margin-top: 10px; display: flex; gap: 10px; justify-content: center; }
-button { background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+button, select {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 button.secondary { border-color: var(--muted); color: var(--muted); }
+select { background: #111; }
 
-.panel { background: var(--panel); padding: 10px; border-radius: 8px; }
-.stat { display: flex; justify-content: space-between; margin-bottom: 8px; }
-.big { font-weight: bold; font-size: 18px; color: var(--accent); }
+.panel { background: var(--panel); padding: 12px; border-radius: 10px; box-shadow: 0 0 10px #000; }
+.stat { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.big { font-weight: bold; font-size: 20px; color: var(--accent); text-shadow: 0 0 6px var(--accent); }
 .muted { color: var(--muted); font-size: 13px; }
